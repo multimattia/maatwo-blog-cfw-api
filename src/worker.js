@@ -30,7 +30,7 @@ const app = new Hono();
 app.use(
 	'/blog/:title',
 	cors({
-		origin: ['https://maatwo.com'],
+		origin: ['https://maatwo.com', 'https://www.maatwo.com'],
 		allowHeaders: ['X-Custom-Header', 'Upgrade-Insecure-Requests'],
 		allowMethods: ['POST', 'GET', 'OPTIONS'],
 		exposeHeaders: ['Content-Length', 'X-Kuma-Revision'],
@@ -42,7 +42,7 @@ app.use(
 app.use(
 	'/blog/:title/:number',
 	cors({
-		origin: ['https://maatwo.com'],
+		origin: ['https://maatwo.com', 'https://www.maatwo.com'],
 		allowHeaders: ['X-Custom-Header', 'Upgrade-Insecure-Requests'],
 		allowMethods: ['POST', 'GET', 'OPTIONS'],
 		exposeHeaders: ['Content-Length', 'X-Kuma-Revision'],
